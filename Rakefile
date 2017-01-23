@@ -5,7 +5,8 @@ lessons = {
   "kata.js" => "node kata.js",
   "kata.go" => "go run kata.go",
   "kata.py" => "python kata.py",
-  "kata.c" => "make kata && ./kata"
+  "kata.c" => "make kata && ./kata",
+  "kata.java" => "javac Kata.java && java Kata"
 }
 
 desc "Run all experiments"
