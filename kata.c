@@ -13,12 +13,9 @@ int as_while_loop(int numbers[], int length){
   int done = 0;
   int i = 0;
 
-  while (done != 1){
+  while (i < length){
     result += numbers[i];
     i++;
-    if (i >= length) {
-      done = 1;
-    }
   }
   return result;
 }
