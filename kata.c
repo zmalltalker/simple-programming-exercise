@@ -10,7 +10,6 @@ int as_for_loop(int numbers[], int length){
 
 int as_while_loop(int numbers[], int length){
   int result = 0;
-  int done = 0;
   int i = 0;
 
   while (i < length){
