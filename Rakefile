@@ -6,7 +6,8 @@ lessons = {
   "kata.go" => "go run kata.go",
   "kata.py" => "python kata.py",
   "kata.c" => "make kata && ./kata",
-  "kata.java" => "javac Kata.java && java Kata"
+  "kata.java" => "javac Kata.java && java Kata",
+  "kata.cr" => "crystal run kata.cr"
 }
 
 desc "Run all experiments"
