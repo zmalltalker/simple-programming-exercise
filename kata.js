@@ -17,7 +17,7 @@ function asWhileLoop(numbers){
     return result;
 }
 
-function asRecursive(numbers, sum){
+function asRecursive(numbers, sum=0){
     if (numbers.length ==0) return sum;
     sum += numbers.pop();
     return asRecursive(numbers, sum);
@@ -26,14 +26,16 @@ function asRecursive(numbers, sum){
 exit_code = 0;
 
 function runTest(label, result) {
+    const correctAnswer = 21;
     console.log(label, result);
-    if (result != 21){
+    if (result != correctAnswer){
         exit_code += 1;
     }
 }
 
+
 runTest("asForLoop:", asForLoop(list()));
 runTest("asWhileLoop:", asWhileLoop(list()));
-runTest("asRecursive:", asRecursive(list(), 0));
+runTest("asRecursive:", asRecursive(list()));
 
 process.exit(exit_code)
