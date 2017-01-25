@@ -14,10 +14,12 @@ lessons = {
 desc "Run all experiments"
 task :all do
   lessons.each do |file, command|
+    started_at = Time.now
     Open3.popen3(command) do |stdin, stdout, stderr, wait_thr|
       exit_status = wait_thr.value
+      elapsed_time = Time.now - started_at
       if exit_status.success?
-        puts "Building #{file} ran successfully"
+        puts "Building #{file} ran successfully in #{elapsed_time} sec"
       else
         puts "Building #{file} failed with status #{exit_status}"
       end
