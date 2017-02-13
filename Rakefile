@@ -8,7 +8,8 @@ lessons = {
   "kata.c" => "make kata && ./kata",
   "kata.java" => "javac Kata.java && java Kata",
   "kata.cr" => "crystal run kata.cr",
-  "kata.el" => "emacs --script kata.el"
+  "kata.el" => "emacs --script kata.el",
+  "kata.rs" => "rustc kata.rs -o kata_rs && ./kata_rs"
 }
 
 desc "Run all experiments"
